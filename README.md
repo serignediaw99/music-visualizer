@@ -1,71 +1,49 @@
 # Music Visualizer
 
-A deep learning project that generates artistic visualizations from music using neural networks. This project combines audio processing with computer vision to create unique visual representations of music.
+A deep learning project that generates artistic visualizations from music using StyleGAN neural networks. This project transforms audio into dynamic, artistic visual representations by leveraging the power of generative adversarial networks.
 
-## Project Overview
+## Overview
 
-This project uses deep learning techniques to analyze music and generate corresponding visual art. It processes audio input and creates visual representations that capture the mood, rhythm, and characteristics of the music.
+This project uses StyleGAN, a state-of-the-art generative adversarial network, to create unique visual interpretations of music. The system analyzes audio input and generates corresponding artistic visualizations that evolve with the music's characteristics. The project is implemented as a Google Colab notebook to take advantage of GPU acceleration, which is essential for running StyleGAN models.
 
 ## Features
 
 - Audio processing and analysis
-- Neural network-based visualization generation
+- StyleGAN-based visualization generation
 - Support for various music formats
 - Artistic style transfer capabilities
-- Real-time visualization generation
 
 ## Project Structure
 
-```
-music-visualizer/
-├── music_visualizer.ipynb    # Main Jupyter notebook containing the implementation
-├── compressed-viz/          # Directory for compressed visualizations
-├── viz/                     # Directory for generated visualizations
-├── papers/                  # Research papers and documentation
-├── pretrained/             # Pre-trained models
-└── wikiart-dataset/        # Dataset for training (not included in repo)
-```
+The project consists of a single Jupyter notebook:
+- `music_visualizer.ipynb` - Main notebook containing the visualization code, designed to run on Google Colab
 
-## Setup and Installation
+## Setup and Usage
 
 1. Clone the repository:
 ```bash
 git clone https://github.com/yourusername/music-visualizer.git
-cd music-visualizer
 ```
 
-2. Create a virtual environment (recommended):
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows, use: venv\Scripts\activate
-```
+2. Open the notebook in Google Colab:
+   - Go to [Google Colab](https://colab.research.google.com)
+   - Upload `music_visualizer.ipynb` or open it directly from GitHub
+   - Ensure you're using a GPU runtime (Runtime → Change runtime type → GPU)
 
-3. Install required dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-## Usage
-
-1. Open the Jupyter notebook:
-```bash
-jupyter notebook music_visualizer.ipynb
-```
-
-2. Follow the instructions in the notebook to:
-   - Load and process your music
-   - Generate visualizations
-   - Save and export results
+3. Follow the notebook instructions to:
+   - Load your music file
+   - Configure visualization parameters
+   - Generate and save visualizations
 
 ## Requirements
 
+- Google Colab account (free tier available)
+- GPU runtime in Colab (required for StyleGAN)
 - Python 3.8+
-- Jupyter Notebook
-- Required Python packages (see requirements.txt)
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
+- PyTorch
+- StyleGAN2-ADA (Pytorch version)
+- Librosa (for audio processing)
+- Additional dependencies are automatically installed in the notebook
 
 ## License
 
@@ -73,9 +51,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Acknowledgments
 
-- WikiArt dataset for training data
-- Various open-source libraries and tools used in this project
-
-## Contact
-
-For questions and feedback, please open an issue in the GitHub repository. 
+- StyleGAN authors for their groundbreaking work in generative adversarial networks
+- Google Colab for providing GPU resources
+- Various open-source libraries that made this project possible
